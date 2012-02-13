@@ -1,0 +1,47 @@
+body {
+    font-family: Helvetica, Verdana, sans-serif;
+    line-height: 20px;
+    padding: 20px 40px 20px 20px;
+}
+ul {
+    list-style-type: none;
+    margin-top: 15px;
+}
+ul pre {
+    line-height: 0;
+}
+ul li {
+    font-size: 85%;
+    line-height: 125%;
+}
+h1 {
+    margin: 10px 0 20px 0;
+    margin-left: 23px;
+    font-size: 50px;
+}
+h2 {
+    cursor: pointer;
+    color: black;
+}
+input {
+    margin: 0;
+    float: right;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+.column, .alwaysopenedcolumn {
+    box-sizing: border-box;
+    float: left;
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(229,229,229,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(229,229,229,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
+    background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(229,229,229,1) 100%);
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 15px;
+    margin: 10px;
+    min-width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}

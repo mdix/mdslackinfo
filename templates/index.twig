@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="css/html5reset-1.6.1.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <h1>mdslackinfo</h1>
+
+    <div class="alwaysopenedcolumn">
+        <h2>system</h2>
+        <ul>
+            {% for line in system %}
+                <li>{{line}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="column">
+        <h2>installed packages<input type="search"></input></h2>
+        <ul>
+            {% for package in installed %}
+                <li>{{package}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="column">
+        <h2>removed packages<input type="search"></input></h2>
+        <ul>
+            {% for package in removed %}
+                <li>{{package}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="column">
+        <h2>syslog<input type="search"></input></h2>
+        <ul>
+            {% for logline in syslog %}
+                <li>{{logline}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="column">
+        <h2>process list<input type="search"></input></h2>
+        <ul>
+            <pre>
+                {% for process in procs %}
+                    <li>{{process}}</li>
+                {% endfor %}
+            </pre>
+        </ul>
+    </div>
+
+    <div class="column">
+        <h2>mounted filesystems<input type="search"></input></h2>
+        <ul>
+            {% for mountedfilesystem in mounted %}
+                <li>{{mountedfilesystem}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="column">
+        <h2>netstat<input type="search"></input></h2>
+        <ul>
+            <pre class="cutTwo">
+                {% for connection in netstat %}
+                    <li>{{connection}}</li>
+                {% endfor %}
+            </pre>
+        </ul>
+    </div>
+
+    <script src="js/slack.js" type="text/javascript"></script>
+</body>
+</html>
